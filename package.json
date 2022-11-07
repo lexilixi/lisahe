@@ -1,0 +1,23 @@
+{
+  "name": "guarderiacanina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss:css",
+    "watch": "sass scss:css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexilixi/lisahe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexilixi/lisahe/issues"
+  },
+  "homepage": "https://github.com/lexilixi/lisahe#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
