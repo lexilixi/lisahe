@@ -1,6 +1,8 @@
 $colorprincipal: linear-gradient(0deg, rgba(255,255,255,0.8015581232492998) 27%, rgba(177,211,232,0.6979166666666667) 78%);
 $colorsecundario:linear-gradient(0deg, rgba(255,255,255,0.8015581232492998) 27%, rgba(177,217,168,0.6979166666666667) 78%);
 
+$anchototal: 100%;
+
 .bodyindex {
     background: $colorprincipal;
 
@@ -21,38 +23,39 @@ $colorsecundario:linear-gradient(0deg, rgba(255,255,255,0.8015581232492998) 27%,
         color: #538857;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-       }
-
-    .divmediotarifas{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "main section" ;
-
-         
-        .tabletarifa{
-            width: 100%;
-            height: 100%;
-            background-image: url(../multiboot/fondotable.jpeg);
-              
-            tr {
-             background-color:rgba(255, 255, 255, 0.6) ;
-             text-align: center;
-             font-family: Arial, Helvetica, sans-serif;
-            }
-            
-            
-            .tr2{
-             background-color:rgba(0, 0, 0, 0.4) ;
-             text-align: center;
-             color: white;
-             font-family: Arial, Helvetica, sans-serif;
-            }
-           
-           
-        }
-    }     
+       }   
 }
+
+
+.divmediotar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "main section" ;
+
+
+    .tabletarifa{
+        width: $anchototal;
+        height: $anchototal;
+        background-image: url(../multiboot/fondotable.jpeg);
+          
+        tr {
+         background-color:rgba(255, 255, 255, 0.6) ;
+         text-align: center;
+         font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        
+        .tr2{
+         background-color:rgba(0, 0, 0, 0.4) ;
+         text-align: center;
+         color: white;
+         font-family: Arial, Helvetica, sans-serif;
+        }
+       
+       
+    }
+}  
   
 .main{
     grid-area: main;
@@ -83,8 +86,8 @@ $colorsecundario:linear-gradient(0deg, rgba(255,255,255,0.8015581232492998) 27%,
 }
 
 .divsobrenos{
-    width: 50%;
-    height: 33.33%;
+    width: $anchototal / 2;
+    height: $anchototal / 3;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -107,10 +110,10 @@ header {
         height: 35px;
         margin-right: 15px;
        
-       }
+    }
 
 
-       ul{ 
+    ul{ 
         li {
     
             margin-right: 20px;
@@ -131,20 +134,19 @@ header {
             
            }
     
-        }
+    }
 
    }
 
 
 .divwidth{
-    width: 100%;
+    width: $anchototal;
     border: white double;
       
     .imgdiv{
         object-fit: cover;
         height: 320px;
     }
-       
 }
 
 .maininstal{
@@ -159,12 +161,6 @@ header {
     "div5 div6"
     "div7 div7" ;
     text-align: center;
-      
-
-    .imginst{
-        width: 95%;
-        height: 450px;
-       }
        
        
     .div1{
@@ -188,11 +184,14 @@ header {
     .div7{
         grid-area: div7;
     }
+
+    .imginst{
+        width: 95%;
+        height: 450px;
+    }
        
    
 }
-
-
 
 
 
@@ -239,23 +238,21 @@ header {
   
 }
 
-
-
 @media screen and (max-width: 500px)  {
+
+    .divmediotar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "main" 
+        "section";
+    }
 
     .divwidth{
        display: none;
-     }
-   
-    .divmediotarifas{
-       row-gap: 5px;
-       grid-template-columns: 1fr;
-       grid-template-rows: 1fr 1fr;
-       grid-template-areas:
-       "main"
-       "section";
-      
     }
+
    
    .maininstal{
     grid-template-columns: 1fr;
@@ -269,11 +266,11 @@ header {
     "div6"
     "div7"
     "div7" ;
+
+    .imginst{
+        height: 300px;
+       }
    
-   }
-   
-   .imginst{
-    height: 300px;
    }
    
    
@@ -288,26 +285,32 @@ header {
    }
    
    
-   ul {
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     justify-content: center;
-    
-   }
    
    header {
-    height: 100px;
-   }
+    height: 150px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
    
-   .logo{
-     margin-top: 20px;
-     margin-right: 0px;
-   
+        li{ 
+           padding: 5px;}
+    }
+
+    .logo{
+        margin-top: 40px;
+        margin-right: 0px;
+    
+    }
    }
    
 }
-   
+
+
+
+
 
 
 

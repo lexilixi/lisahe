@@ -16,22 +16,23 @@
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-.bodypag2 .divmediotarifas {
+
+.divmediotar {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "main section";
 }
-.bodypag2 .divmediotarifas .tabletarifa {
+.divmediotar .tabletarifa {
   width: 100%;
   height: 100%;
   background-image: url(../multiboot/fondotable.jpeg);
 }
-.bodypag2 .divmediotarifas .tabletarifa tr {
+.divmediotar .tabletarifa tr {
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-.bodypag2 .divmediotarifas .tabletarifa .tr2 {
+.divmediotar .tabletarifa .tr2 {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
   color: white;
@@ -66,7 +67,7 @@
 
 .divsobrenos {
   width: 50%;
-  height: 33.33%;
+  height: 33.3333333333%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,10 +121,6 @@ header ul li a:hover {
   grid-template-areas: "div1 div2" "div3 div4" "div5 div6" "div7 div7";
   text-align: center;
 }
-.maininstal .imginst {
-  width: 95%;
-  height: 450px;
-}
 .maininstal .div1 {
   grid-area: div1;
 }
@@ -144,6 +141,10 @@ header ul li a:hover {
 }
 .maininstal .div7 {
   grid-area: div7;
+}
+.maininstal .imginst {
+  width: 95%;
+  height: 450px;
 }
 
 .footer {
@@ -182,21 +183,21 @@ header ul li a:hover {
 }
 
 @media screen and (max-width: 500px) {
-  .divwidth {
-    display: none;
-  }
-  .divmediotarifas {
-    row-gap: 5px;
+  .divmediotar {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "main" "section";
+  }
+  .divwidth {
+    display: none;
   }
   .maininstal {
     grid-template-columns: 1fr;
     grid-column: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "div1" "div2" "div3" "div4" "div5" "div6" "div7" "div7";
   }
-  .imginst {
+  .maininstal .imginst {
     height: 300px;
   }
   p {
@@ -206,17 +207,20 @@ header ul li a:hover {
     width: 50px;
     height: 50px;
   }
-  ul {
+  header {
+    height: 150px;
+  }
+  header ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
   }
-  header {
-    height: 100px;
+  header ul li {
+    padding: 5px;
   }
-  .logo {
-    margin-top: 20px;
+  header .logo {
+    margin-top: 40px;
     margin-right: 0px;
   }
 }
